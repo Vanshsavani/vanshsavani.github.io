@@ -5,12 +5,37 @@
   box-sizing: border-box;
 }
 
+.toggle-mode {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 999;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.toggle-mode:hover {
+  background-color: #2563eb;
+}
+
 body {
   font-family: 'Fira Code', monospace;
   background-color: #0d1117;
   color: #c9d1d9;
   line-height: 1.6;
   scroll-behavior: smooth;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+  background-color: #ffffff;
+  color: #1f2937;
 }
 
 header.hero {
@@ -18,11 +43,23 @@ header.hero {
   color: #f8f8f8;
   text-align: center;
   padding: 6rem 1rem;
+  transition: background 0.3s;
+}
+
+body.light-mode header.hero {
+  background: linear-gradient(to right, #f3f4f6, #e5e7eb);
+  color: #1f2937;
 }
 
 header.hero h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
+  animation: fadeInDown 1s ease;
+}
+
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 .tagline {
@@ -49,6 +86,11 @@ nav {
   background-color: #161b22;
   padding: 1rem;
   text-align: center;
+  transition: background-color 0.3s;
+}
+
+body.light-mode nav {
+  background-color: #f3f4f6;
 }
 
 nav ul {
@@ -66,6 +108,10 @@ nav a {
   transition: color 0.3s;
 }
 
+body.light-mode nav a {
+  color: #1f2937;
+}
+
 nav a:hover {
   color: #3b82f6;
 }
@@ -74,6 +120,12 @@ section {
   padding: 4rem 2rem;
   max-width: 900px;
   margin: auto;
+  animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 section h2 {
@@ -98,30 +150,10 @@ section h2 {
   font-size: 0.9rem;
 }
 
+body.light-mode .stack-list span {
+  background: #e5e7eb;
+  color: #1f2937;
+}
+
 .project {
-  background: #161b22;
-  padding: 1.5rem;
-  margin-top: 2rem;
-  border-left: 4px solid #3b82f6;
-  border-radius: 8px;
-}
-
-.project h3 {
-  color: #facc15;
-  margin-bottom: 0.5rem;
-}
-
-.project a {
-  display: inline-block;
-  margin-top: 1rem;
-  color: #3b82f6;
-  text-decoration: underline;
-}
-
-footer {
-  text-align: center;
-  padding: 2rem;
-  background: #0f172a;
-  color: #64748b;
-  margin-top: 4rem;
-}
+  background:

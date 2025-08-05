@@ -1,4 +1,9 @@
 /* === General Reset === */
+
+html {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -156,4 +161,9 @@ body.light-mode .stack-list span {
 }
 
 .project {
-  background:
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.4s, color 0.4s;
+}
+
+nav, footer, header.hero {
+  transition: background-color 0.4s, color 0.4s;
+}

@@ -1,1 +1,6 @@
-
+{
+  "category": "Deep Learning · Healthcare",
+  "title": "Alzheimer’s Stage Classification (PyTorch + SHAP)",
+  "summary": "Hybrid LSTM-attention on longitudinal MRI; multimodal fusion with clinical scores; interpretability via SHAP. Improved diagnostic reliability by ~14% over CNN baseline.",
+  "tags": ["PyTorch","SHAP","Seq Models"]
+}

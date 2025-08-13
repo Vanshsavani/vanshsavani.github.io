@@ -1,6 +1,32 @@
-{
-  "category": "Deep Learning · Healthcare",
-  "title": "Alzheimer’s Stage Classification (PyTorch + SHAP)",
-  "summary": "Hybrid LSTM-attention on longitudinal MRI; multimodal fusion with clinical scores; interpretability via SHAP. Improved diagnostic reliability by ~14% over CNN baseline.",
-  "tags": ["PyTorch","SHAP","Seq Models"]
-}
+[
+  {
+    "category": "Deep Learning · Healthcare",
+    "title": "Alzheimer’s Stage Classification (PyTorch + SHAP)",
+    "summary": "Hybrid LSTM‑attention on longitudinal MRI; multimodal fusion with clinical scores; interpretability via SHAP. Improved diagnostic reliability by ~14% over CNN baseline.",
+    "tags": [
+      "PyTorch",
+      "SHAP",
+      "Seq Models"
+    ]
+  },
+  {
+    "category": "Time Series · Mobility",
+    "title": "Urban Congestion Prediction (AWS Lambda/EC2)",
+    "summary": "XGBoost on streaming traffic data with anomaly alerts; 11% lower RMSE than baseline; live dashboard for planners.",
+    "tags": [
+      "XGBoost",
+      "AWS",
+      "ETL"
+    ]
+  },
+  {
+    "category": "Systems · Distributed",
+    "title": "Tendermint PoS Consensus Simulation",
+    "summary": "Dockerized validator network with crash/delay scenarios; measured finality, latency & throughput; >95% fault‑tolerance observed.",
+    "tags": [
+      "Docker",
+      "Go/Python",
+      "Distributed"
+    ]
+  }
+]

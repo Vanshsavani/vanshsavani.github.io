@@ -1,90 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vansh Savani | AI/ML Engineer</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vansh Savani · AI/ML Engineer & Data Scientist</title>
+  <meta name="description" content="Portfolio of Vansh Savani — AI/ML Engineer, Data Scientist, and Software Engineer. Projects in NLP, time-series, MLOps, and systems design." />
+  <meta property="og:title" content="Vansh Savani · AI/ML Engineer & Data Scientist" />
+  <meta property="og:description" content="Projects in NLP, time-series, MLOps, and systems design." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vanshsavani.github.io" />
+  <link rel="icon" href="/favicon.ico" />
+  <!-- Tailwind Play CDN (no build needed) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", "Helvetica Neue", "Arial", "sans-serif"] },
+          boxShadow: {soft: "0 10px 30px rgba(2,6,23,0.15)"}
+        }
+      },
+      darkMode: 'class'
+    }
+  </script>
+  <style>
+    /* micro-interactions */
+    .card:hover { transform: translateY(-2px); }
+    .gradient-text { background: linear-gradient(90deg,#4f46e5,#06b6d4,#22c55e); -webkit-background-clip:text; background-clip:text; color: transparent; }
+  </style>
+  <script>
+    // dark mode preference
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Vansh Savani",
+    "jobTitle": "AI/ML Engineer",
+    "url": "https://vanshsavani.github.io",
+    "sameAs": ["https://www.linkedin.com/in/vanshsavani", "https://github.com/Vanshsavani"],
+    "knowsAbout": ["Machine Learning","Deep Learning","NLP","Time Series","MLOps","Python","PyTorch","TensorFlow","AWS"]
+  }
+  </script>
 </head>
-<body>
-  <button class="toggle-mode">🌙 / ☀️</button>
-
-  <header class="hero">
-    <h1>Vansh Savani</h1>
-    <p class="tagline">AI/ML Engineer & Data Scientist</p>
-    <a href="#projects" class="btn">View Projects</a>
+<body class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 font-sans selection:bg-indigo-200/40 selection:text-indigo-900">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/70 dark:bg-slate-950/70 backdrop-blur border-b border-slate-200/60 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#home" class="text-lg font-semibold">Vansh <span class="gradient-text">Savani</span></a>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="#projects" class="hover:text-indigo-600">Projects</a>
+        <a href="#experience" class="hover:text-indigo-600">Experience</a>
+        <a href="#skills" class="hover:text-indigo-600">Skills</a>
+        <a href="#about" class="hover:text-indigo-600">About</a>
+        <a href="#contact" class="hover:text-indigo-600">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="resume.pdf" class="hidden sm:inline-flex px-3 py-1.5 rounded-full bg-indigo-600 text-white text-xs shadow-soft hover:bg-indigo-700" download>Download Résumé</a>
+        <button id="themeToggle" aria-label="Toggle dark mode" class="p-2 rounded-lg border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-900">🌓</button>
+      </div>
+    </div>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#stack">Stack</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m Vansh, an AI/ML Engineer with strong experience building ML systems in real-world domains like healthcare, gaming, and urban mobility. I specialize in NLP, time series, and MLOps — and I’m passionate about building products that make data work for people.</p>
-  </section>
-
-  <section id="stack">
-    <h2>My Tech Stack</h2>
-    <div class="stack-list">
-      <span>Python</span>
-      <span>TensorFlow</span>
-      <span>PyTorch</span>
-      <span>Docker</span>
-      <span>AWS</span>
-      <span>SQL</span>
-      <span>Power BI</span>
-      <span>GitHub Actions</span>
-      <span>LightGBM</span>
-      <span>scikit-learn</span>
+  <!-- Hero -->
+  <section id="home" class="max-w-6xl mx-auto px-4 pt-12 md:pt-20 pb-8">
+    <div class="grid md:grid-cols-5 gap-8 items-center">
+      <div class="md:col-span-3">
+        <p class="text-sm font-medium text-indigo-600">Open to roles · AI/ML · Data · Software</p>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mt-2">Building <span class="gradient-text">intelligent</span> systems that ship.</h1>
+        <p class="mt-4 text-slate-600 dark:text-slate-300 max-w-2xl">AI/ML Engineer & Data Scientist focused on NLP, time series, and MLOps. I design, train, and deploy models end‑to‑end — from data pipelines to real‑time inference — to drive measurable impact.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#projects" class="px-4 py-2 rounded-lg bg-slate-900 text-white dark:bg-white dark:text-slate-900 shadow-soft">See Projects</a>
+          <a href="mailto:vanshsavani13@gmail.com" class="px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700">Email Me</a>
+          <a href="https://www.linkedin.com/in/vanshsavani" class="px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700">LinkedIn</a>
+          <a href="https://github.com/Vanshsavani" class="px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700">GitHub</a>
+        </div>
+        <div class="mt-6 text-xs text-slate-500">Southfield, MI · Open to relocation · U.S. remote</div>
+      </div>
+      <div class="md:col-span-2">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-4">
+          <p class="text-sm font-semibold mb-3">Target roles</p>
+          <div class="grid grid-cols-1 gap-2">
+            <button class="roleBtn px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 text-left hover:bg-slate-50 dark:hover:bg-slate-900" data-role="aiml">AI/ML Engineer</button>
+            <button class="roleBtn px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 text-left" data-role="ds">Data Scientist / Analyst</button>
+            <button class="roleBtn px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 text-left" data-role="swe">Software Engineer</button>
+          </div>
+          <div id="roleCopy" class="mt-4 text-sm text-slate-600 dark:text-slate-300"></div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Deep Learning for Alzheimer’s Detection</h3>
-      <p>Developed a hybrid LSTM-attention model in PyTorch to classify Alzheimer’s stages from MRI sequences. Added multimodal data and SHAP explanations for interpretability.</p>
-      <a href="https://github.com/yourusername/alzheimers-project" target="_blank">GitHub Repo</a>
-    </div>
-    <div class="project">
-      <h3>Urban Mobility Prediction</h3>
-      <p>Built real-time time-series predictions for traffic congestion using XGBoost and deployed to AWS Lambda + EC2. Used statistical anomaly detection for alerts.</p>
-      <a href="https://github.com/yourusername/mobility-ai" target="_blank">GitHub Repo</a>
+  <!-- Projects -->
+  <section id="projects" class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-2xl md:text-3xl font-bold">Selected Projects</h2>
+    <p class="text-slate-600 dark:text-slate-300 mt-2">Real work demonstrating end‑to‑end ownership: data, models, and deployment.</p>
+
+    <div class="grid md:grid-cols-2 gap-6 mt-8">
+      <!-- Project 1 -->
+      <article class="card rounded-2xl border border-slate-200 dark:border-slate-800 p-6 transition">
+        <div class="text-xs uppercase tracking-wide text-slate-500">Deep Learning · Healthcare</div>
+        <h3 class="mt-2 text-xl font-semibold">Alzheimer’s Stage Classification (PyTorch + SHAP)</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Hybrid LSTM‑attention on longitudinal MRI; multimodal fusion with clinical scores; interpretability via saliency/SHAP. Improved diagnostic reliability by ~14% over CNN baseline.</p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs">
+          <span class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-800">PyTorch</span>
+          <span class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-800">SHAP</span>
+          <span class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-800">NLP/Seq</span>
+        </div>
+        <div class="mt-4 flex gap-3 text-sm">
+          <a class="underline" href="https://github.com/" target="_blank" rel="noopener">Code</a>
+        </div>
+      </article>
+      <!-- Project 2 -->
+      <article class="card rounded-2xl border border-slate-200 dark:border-slate-800 p-6 transition">
+        <div class="text-xs uppercase tracking-wide text-slate-500">Time Series · Mobility</div>
+        <h3 class="mt-2 text-xl font-semibold">Urban Congestion Prediction (AWS Lambda/EC2)</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">XGBoost on streaming traffic data with anomaly alerts; 11% lower RMSE than baseline; live dashboard for planners.</p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs">
+          <span class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-800">XGBoost</span>
+          <span class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-800">AWS</span>
+          <span class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-800">ETL</span>
+        </div>
+        <div class="mt-4 flex gap-3 text-sm">
+          <a class="underline" href="https://github.com/" target="_blank" rel="noopener">Code</a>
+        </div>
+      </article>
+      <!-- Project 3 -->
+      <article class="card rounded-2xl border border-slate-200 dark:border-slate-800 p-6 transition">
+        <div class="text-xs uppercase tracking-wide text-slate-500">Systems · Distributed</div>
+        <h3 class="mt-2 text-xl font-semibold">Tendermint PoS Consensus Simulation</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Dockerized validator network with crash/delay scenarios; measured finality, latency & throughput; >95% fault‑tolerance observed.</p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs">
+          <span class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-800">Docker</span>
+          <span class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-800">Go/Python</span>
+          <span class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-800">Distributed</span>
+        </div>
+        <div class="mt-4 flex gap-3 text-sm">
+          <a class="underline" href="https://github.com/" target="_blank" rel="noopener">Code</a>
+        </div>
+      </article>
+      <!-- Project 4 -->
+      <article class="card rounded-2xl border border-slate-200 dark:border-slate-800 p-6 transition">
+        <div class="text-xs uppercase tracking-wide text-slate-500">NLP · Gaming</div>
+        <h3 class="mt-2 text-xl font-semibold">In‑game Behavior Modeling with Transformers</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Hugging Face/TensorFlow pipeline for personalization; +18% targeting accuracy; ONNX export for low‑latency inference in Unity.</p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs">
+          <span class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-800">Transformers</span>
+          <span class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-800">TensorFlow</span>
+          <span class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-800">ONNX</span>
+        </div>
+        <div class="mt-4 flex gap-3 text-sm">
+          <a class="underline" href="https://github.com/" target="_blank" rel="noopener">Code</a>
+        </div>
+      </article>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:vanshsavani13@gmail.com">vanshsavani13@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/vanshsavani" target="_blank">/vanshsavani</a></p>
-    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">/Vanshsavani</a></p>
+  <!-- Experience -->
+  <section id="experience" class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-2xl md:text-3xl font-bold">Experience</h2>
+    <div class="mt-6 grid md:grid-cols-2 gap-6">
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <div class="text-xs text-slate-500">Jun 2025 – Present · Remote</div>
+        <h3 class="text-lg font-semibold">Software Engineer · Community Dreams Foundation</h3>
+        <ul class="mt-3 list-disc list-inside text-sm text-slate-600 dark:text-slate-300 space-y-2">
+          <li>Built Java/Rails/.NET services; improved scalability & response time by 20%.</li>
+          <li>Owned SDLC & CI/CD, reducing release cycle time by 15%.</li>
+          <li>Standardized docs/diagrams; cut onboarding time by 30%.</li>
+          <li>Shipped features on‑time across 3 consecutive quarters.</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <div class="text-xs text-slate-500">Apr 2022 – Jan 2023 · Surat, India</div>
+        <h3 class="text-lg font-semibold">AI/ML Intern · Maxima Gaming Studio</h3>
+        <ul class="mt-3 list-disc list-inside text-sm text-slate-600 dark:text-slate-300 space-y-2">
+          <li>Transformer models for player behavior; +18% personalization accuracy.</li>
+          <li>Automated preprocessing; –25% manual data prep time.</li>
+          <li>Real‑time A/B dashboards; +12% new mode usage.</li>
+          <li>ONNX export integrated in Unity; –30% inference latency.</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Vansh Savani</p>
+  <!-- Skills -->
+  <section id="skills" class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-2xl md:text-3xl font-bold">Core Skills</h2>
+    <div class="mt-4 grid md:grid-cols-3 gap-6">
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <h3 class="font-semibold">ML / DL</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">PyTorch, TensorFlow, scikit‑learn, XGBoost, LightGBM, Transformers, SHAP, LSTM/Attention</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <h3 class="font-semibold">Data & MLOps</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Pandas/NumPy, SQL, Docker, GitHub Actions, AWS (Lambda, EC2), ETL, dashboards</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <h3 class="font-semibold">Software</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Python, C++, Java, JS/HTML/CSS, Linux, Systems design, Docs</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-2xl md:text-3xl font-bold">About</h2>
+    <p class="mt-4 text-slate-700 dark:text-slate-300 max-w-3xl">I’m an AI/ML Engineer with a Master’s in Computer Science (Lawrence Technological University, 3.62/4.00). I thrive at the intersection of models and product, taking ideas from data acquisition to deployed systems. I enjoy fast feedback loops, clean abstractions, and measurable impact.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-6xl mx-auto px-4 py-12">
+    <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-8">
+      <h2 class="text-2xl md:text-3xl font-bold">Let’s work together</h2>
+      <p class="mt-2 text-slate-600 dark:text-slate-300">Email <a class="underline" href="mailto:vanshsavani13@gmail.com">vanshsavani13@gmail.com</a> or connect on <a class="underline" href="https://www.linkedin.com/in/vanshsavani" target="_blank" rel="noopener">LinkedIn</a>.</p>
+    </div>
+  </section>
+
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-8">
+    <div class="max-w-6xl mx-auto px-4 text-sm flex flex-wrap items-center justify-between gap-4">
+      <div>© <span id="year"></span> Vansh Savani</div>
+      <div class="flex gap-4">
+        <a href="https://github.com/Vanshsavani" class="hover:underline">GitHub</a>
+        <a href="https://www.linkedin.com/in/vanshsavani" class="hover:underline">LinkedIn</a>
+        <a href="mailto:vanshsavani13@gmail.com" class="hover:underline">Email</a>
+      </div>
+    </div>
   </footer>
 
   <script>
-    // Apply saved theme on load
-    const savedMode = localStorage.getItem('theme');
-    if (savedMode === 'light') {
-      document.body.classList.add('light-mode');
-    }
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Toggle and store theme preference
-    document.querySelector('.toggle-mode').addEventListener('click', () => {
-      document.body.classList.toggle('light-mode');
-      localStorage.setItem('theme',
-        document.body.classList.contains('light-mode') ? 'light' : 'dark'
-      );
+    // Role copy switcher
+    const roleCopyMap = {
+      aiml: 'I build end‑to‑end ML systems: data pipelines, training, evaluation, and low‑latency inference with Docker/AWS.',
+      ds: 'I analyze messy, real‑world data; craft features and experiments; and communicate results with business impact.',
+      swe: 'I design and ship reliable services and tooling that make data/ML products maintainable and fast.'
+    };
+    const roleBtns = document.querySelectorAll('.roleBtn');
+    const roleCopy = document.getElementById('roleCopy');
+    function setRole(role){
+      roleCopy.textContent = roleCopyMap[role];
+      roleBtns.forEach(b=> b.classList.toggle('bg-slate-100', b.dataset.role===role));
+    }
+    roleBtns.forEach(b=> b.addEventListener('click', ()=> setRole(b.dataset.role)));
+    setRole('aiml');
+
+    // Dark mode toggle
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
     });
   </script>
+
+  <!-- Analytics (replace UA/measurement ID) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XXXXXXX');
+  </script> -->
 </body>
 </html>

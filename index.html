@@ -60,26 +60,72 @@
   <!-- Experience -->
   <section id="experience" class="max-w-6xl mx-auto px-4 py-12">
     <h2 class="text-2xl md:text-3xl font-bold">Experience</h2>
+    <div class="mt-6 grid md:grid-cols-2 gap-6">
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <div class="text-xs text-slate-500">Jun 2025 – Present · Remote</div>
+        <h3 class="text-lg font-semibold">Software Engineer · Community Dreams Foundation</h3>
+        <ul class="mt-3 list-disc list-inside text-sm text-slate-600 dark:text-slate-300 space-y-2">
+          <li>Built Java/Rails/.NET services; improved scalability &amp; response time by 20%.</li>
+          <li>Owned SDLC &amp; CI/CD, reducing release cycle time by 15%.</li>
+          <li>Standardized docs/diagrams; cut onboarding time by 30%.</li>
+          <li>Shipped features on‑time across 3 consecutive quarters.</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <div class="text-xs text-slate-500">Apr 2022 – Jan 2023 · Surat, India</div>
+        <h3 class="text-lg font-semibold">AI/ML Intern · Maxima Gaming Studio</h3>
+        <ul class="mt-3 list-disc list-inside text-sm text-slate-600 dark:text-slate-300 space-y-2">
+          <li>Transformer models for player behavior; +18% personalization accuracy.</li>
+          <li>Automated preprocessing; –25% manual data prep time.</li>
+          <li>Real‑time A/B dashboards; +12% new mode usage.</li>
+          <li>ONNX export integrated; –30% inference latency.</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <!-- Skills -->
   <section id="skills" class="max-w-6xl mx-auto px-4 py-12">
     <h2 class="text-2xl md:text-3xl font-bold">Core Skills</h2>
+    <div class="mt-4 grid md:grid-cols-3 gap-6">
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <h3 class="font-semibold">ML / DL</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">PyTorch, TensorFlow, scikit‑learn, XGBoost, LightGBM, Transformers, SHAP, LSTM/Attention</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <h3 class="font-semibold">Data &amp; MLOps</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Pandas/NumPy, SQL, Docker, GitHub Actions, AWS (Lambda, EC2), ETL, dashboards</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <h3 class="font-semibold">Software</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Python, C++, Java, JS/HTML/CSS, Linux, Systems design, Docs</p>
+      </div>
+    </div>
   </section>
 
   <!-- About -->
   <section id="about" class="max-w-6xl mx-auto px-4 py-12">
     <h2 class="text-2xl md:text-3xl font-bold">About</h2>
+    <p class="mt-4 text-slate-700 dark:text-slate-300 max-w-3xl">I’m an AI/ML Engineer with a Master’s in Information Systems. I thrive at the intersection of models and product, taking ideas from data acquisition to deployed systems. I enjoy fast feedback loops, clean abstractions, and measurable impact.</p>
   </section>
 
   <!-- Contact -->
   <section id="contact" class="max-w-6xl mx-auto px-4 py-12">
-    <h2 class="text-2xl md:text-3xl font-bold">Let’s work together</h2>
-    <p>Email: <a class="underline" href="mailto:vanshsavani13@gmail.com">vanshsavani13@gmail.com</a></p>
+    <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-8">
+      <h2 class="text-2xl md:text-3xl font-bold">Let’s work together</h2>
+      <p class="mt-2 text-slate-600 dark:text-slate-300">Email <a class="underline" href="mailto:vanshsavani13@gmail.com">vanshsavani13@gmail.com</a> or connect on <a class="underline" href="https://www.linkedin.com/in/vanshsavani" target="_blank" rel="noopener">LinkedIn</a>.</p>
+    </div>
   </section>
 
-  <footer class="border-t py-8">
-    <div class="max-w-6xl mx-auto px-4 text-sm">© <span id="year"></span> Vansh Savani</div>
+ <footer class="border-t border-slate-200 dark:border-slate-800 py-8">
+    <div class="max-w-6xl mx-auto px-4 text-sm flex flex-wrap items-center justify-between gap-4">
+      <div>© <span id="year"></span> Vansh Savani</div>
+      <div class="flex gap-4">
+        <a href="https://github.com/Vanshsavani" class="hover:underline">GitHub</a>
+        <a href="https://www.linkedin.com/in/vanshsavani" class="hover:underline">LinkedIn</a>
+        <a href="mailto:vanshsavani13@gmail.com" class="hover:underline">Email</a>
+      </div>
+    </div>
   </footer>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
